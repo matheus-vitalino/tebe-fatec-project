@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useEffect } from "react";
+import axios from "axios";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -83,21 +84,15 @@ function App() {
           <h3>{Date(lastSpotData.timestamp)}</h3>
           <h3>Temperatura: {lastSpotData.temperature}</h3>
 
-          <h3>Aceleração Axial:
-            {lastSpotData.acceleration_axial}</h3>
-          <h3>Aceleração Horizontal:
-            {lastSpotData.acceleration_horizontal}</h3>
-          <h3>Aceleração Vertical:
-            {lastSpotData.acceleration_vertical}</h3>
+          <h3>Aceleração Axial: {lastSpotData.acceleration_axial}</h3>
+          <h3>Aceleração Horizontal: {lastSpotData.acceleration_horizontal}</h3>
+          <h3>Aceleração Vertical: {lastSpotData.acceleration_vertical}</h3>
           <h3>Velocidade Axial: {lastSpotData.velocity_axial}</h3>
-          <h3>Velocidade Horizontal:
-            {lastSpotData.velocity_horizontal}</h3>
-          <h3>Velocidade Vertical:
-            {lastSpotData.velocity_vertical}</h3>
+          <h3>Velocidade Horizontal: {lastSpotData.velocity_horizontal}</h3>
+          <h3>Velocidade Vertical: {lastSpotData.velocity_vertical}</h3>
         </div>
       )}
     </div>
   );
 }
-
 export default App
